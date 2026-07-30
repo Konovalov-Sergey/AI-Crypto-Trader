@@ -1,0 +1,8 @@
+python-binance
+ccxt
+pandas
+numpy
+python-dotenv
+requests
+matplotlib
+ta

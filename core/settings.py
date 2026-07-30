@@ -1,0 +1,11 @@
+APP_NAME = "AI Crypto Trader"
+
+VERSION = "0.1.0"
+
+DEFAULT_SYMBOL = "BTCUSDT"
+
+TIMEFRAME = "1h"
+
+DATA_FOLDER = "data"
+
+LOG_FOLDER = "logs"
