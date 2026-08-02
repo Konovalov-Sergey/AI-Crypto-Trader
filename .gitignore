@@ -1,18 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
 # Virtual environment
 .venv/
 
-# Python cache
-__pycache__/
-*.py[cod]
-
-# Logs
-logs/
-
-# Environment
+# Environment variables
 .env
+
+# Visual Studio
+.vs/
 
 # VS Code
 .vscode/
+
+# Logs
+logs/
 
 # macOS
 .DS_Store
