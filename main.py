@@ -4,6 +4,7 @@ from data.market_data import MarketData
 from indicators.ema import EMA
 from charts.chart import plot_price
 from indicators.rsi import RSI
+from strategies.ema_rsi_strategy import EmaRsiStrategy
 
 show_banner()
 
@@ -17,10 +18,26 @@ df = market.load_history()
 df = EMA.calculate(df, 20)
 df = EMA.calculate(df, 50)
 
+# Розрахунок RSI
 df = RSI.calculate(df)
 
+# Розрахунок EMA, RSI
+df = RSI.calculate(df)
+
+df = EmaRsiStrategy.generate_signals(df)
+
 print()
-print(df[["Close", "EMA20", "EMA50", "RSI"]].tail())
+print(
+    df[
+        [
+            "Close",
+            "EMA20",
+            "EMA50",
+            "RSI",
+            "Signal"
+        ]
+    ].tail(20)
+)
 
 logger.info("EMA calculated successfully.")
 plot_price(df)
